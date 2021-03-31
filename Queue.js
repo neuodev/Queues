@@ -14,6 +14,12 @@ class Queue {
       this.R = this.array.length - 1;
     }
   }
+  dequeue() {
+    if (this.array.length === 0) return false;
+    if (this.array.length - 1 === this.F) return 
+    this.F = this.F + 1;
+  }
+  
 }
 
 const queue = new Queue();
@@ -22,4 +28,5 @@ queue.enqueue(20);
 queue.enqueue(30);
 queue.enqueue(40);
 queue.enqueue(50);
+queue.dequeue();
 console.log(queue);
