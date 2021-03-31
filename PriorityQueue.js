@@ -10,16 +10,23 @@ class PriorityQueue {
     else if (this.priorityQueue[lastIdx] < val) {
       this.priorityQueue.push(val);
     } else {
-      let i;
-      for (i = lastIdx; i >= 0; i--) {
-        if (this.priorityQueue[i] > val) {
-          this.priorityQueue[i + 1] = this.priorityQueue[i];
-        } else {
-          break;
-        }
-      }
-      this.priorityQueue[i + 1] = val;
+      let idx = this.shiftItems(val);
+      this.priorityQueue[idx + 1] = val;
     }
+  }
+
+  shiftItems(val) {
+    const lastIdx = this.priorityQueue.length - 1;
+    let i;
+    for (i = lastIdx; i >= 0; i--) {
+      if (this.priorityQueue[i] > val) {
+        this.priorityQueue[i + 1] = this.priorityQueue[i];
+      } else {
+        break;
+      }
+    }
+
+    return i;
   }
 }
 
