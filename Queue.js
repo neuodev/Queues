@@ -6,6 +6,9 @@ class Queue {
   }
 
   enqueue(val) {
+    if (this.R === this.array.length) {
+      this._doubleArray();
+    }
     this.array[this.R] = val;
     this.R++;
   }
@@ -17,6 +20,16 @@ class Queue {
   peek() {
     return this.array[this.F];
   }
+
+  _doubleArray() {
+    const newArrayLength = this.array.length * 2;
+    const newArray = new Array(newArrayLength);
+    for (let i = 0; i < this.array.length; i++) {
+      newArray[i] = this.array[i];
+    }
+    this.array = newArray;
+    console.log(this.array);
+  }
 }
 
 const queue = new Queue(5);
@@ -25,5 +38,6 @@ queue.enqueue(20);
 queue.enqueue(30);
 queue.enqueue(40);
 queue.enqueue(50);
+
 console.log(queue.peek());
 console.log(queue);
