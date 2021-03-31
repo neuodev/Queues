@@ -22,7 +22,7 @@ class Queue {
   }
   isFull() {
     if (this.R === this.array.length) return true;
-    return true;
+    return false;
   }
 
   _doubleArray() {
@@ -42,10 +42,7 @@ queue.enqueue(20);
 queue.enqueue(30);
 queue.enqueue(40);
 queue.enqueue(50);
-queue.dequeue();
-queue.dequeue();
-queue.dequeue();
-queue.dequeue();
-queue.dequeue();
+queue.enqueue(50);
+console.log(queue.isFull());
 console.log(queue.peek());
 console.log(queue);
