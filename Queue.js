@@ -34,7 +34,5 @@ queue.dequeue()
 queue.dequeue()
 queue.dequeue()
 queue.dequeue()
-queue.dequeue()
-queue.dequeue()
-console.log(queue.peek());
+console.log(queue.peek( ));
 console.log(queue);
