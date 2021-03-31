@@ -1,18 +1,13 @@
 class Queue {
   constructor(length) {
     this.array = new Array(length);
-    this.F = null;
-    this.R = null;
+    this.F = 0;
+    this.R = 0;
   }
 
   enqueue(val) {
-    this.array.push(val);
-    if (this.array.length === 1) {
-      this.F = 0;
-      this.R = 0;
-    } else {
-      this.R = this.array.length - 1;
-    }
+    this.array[this.R] = val;
+    this.R++;
   }
   dequeue() {
     if (this.array.length === 0) return false;
@@ -30,9 +25,5 @@ queue.enqueue(20);
 queue.enqueue(30);
 queue.enqueue(40);
 queue.enqueue(50);
-queue.dequeue();
-queue.dequeue();
-queue.dequeue();
-queue.dequeue();
 console.log(queue.peek());
 console.log(queue);
