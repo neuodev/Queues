@@ -9,4 +9,4 @@ function reverseQueue(queue: Array<number>) {
   }
   return queue;
 }
-console.log(reverseQueue([]));
+console.log(reverseQueue([1,2,3]));
