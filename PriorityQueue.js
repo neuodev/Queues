@@ -11,7 +11,7 @@ class PriorityQueue {
       this.priorityQueue.push(val);
     } else {
       let idx = this.shiftItems(val);
-      this.priorityQueue[idx + 1] = val;
+      this.priorityQueue[idx] = val;
     }
   }
 
@@ -26,7 +26,7 @@ class PriorityQueue {
       }
     }
 
-    return i;
+    return i + 1;
   }
 }
 
