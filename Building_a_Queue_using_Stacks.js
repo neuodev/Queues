@@ -1,7 +1,7 @@
 class Queue {
   constructor() {
-    this.S1 = [];
-    this.S2 = [];
+    this.S1 = []; // for enqueue
+    this.S2 = []; // for dequeue
   }
 
   enqueue(val) {
