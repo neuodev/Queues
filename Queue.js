@@ -16,3 +16,10 @@ class Queue {
   }
 }
 
+const queue = new Queue();
+queue.enqueue(10);
+queue.enqueue(20);
+queue.enqueue(30);
+queue.enqueue(40);
+queue.enqueue(50);
+console.log(queue);
