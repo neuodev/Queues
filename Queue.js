@@ -38,6 +38,10 @@ queue.enqueue(20);
 queue.enqueue(30);
 queue.enqueue(40);
 queue.enqueue(50);
-
+queue.dequeue()
+queue.dequeue()
+queue.dequeue()
+queue.dequeue()
+queue.dequeue()
 console.log(queue.peek());
 console.log(queue);
